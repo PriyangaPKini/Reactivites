@@ -7,7 +7,7 @@ namespace Persistance
 {
     public class Seed
     {
-        public static void SeedData(Datacontext context)
+        public static void SeedData(DataContext context)
         {
             if(!context.Activities.Any())
             {

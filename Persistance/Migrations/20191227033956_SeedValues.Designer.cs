@@ -7,7 +7,7 @@ using Persistance;
 
 namespace Persistance.Migrations
 {
-    [DbContext(typeof(Datacontext))]
+    [DbContext(typeof(DataContext))]
     [Migration("20191227033956_SeedValues")]
     partial class SeedValues
     {
