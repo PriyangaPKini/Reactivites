@@ -29,7 +29,7 @@ namespace API.Controllers
 
         [HttpGet("{id}")]
         public async Task<ActionResult<Activity>> Details(Guid id)
-        {g  
+        {
             return await _mediator.Send(new Details.Query{Id = id});
         }
     }
