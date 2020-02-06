@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Application.Activity;
-using MediatR.Extensions.DependencyInjection;
+//using MediatR.Extensions.DependencyInjection;
 
 namespace Reactivities
 {
@@ -31,15 +31,15 @@ namespace Reactivities
             {
                 Opt.UseSqlite(Configuration.GetConnectionString("Defaultconnection"));
             });
-            services.AddCors(opt =>
-            {
-                opt.AddPolicy("CorsPolicy",policy =>
-                {
-                    policy.AllowAnyHeader().AllowAnyMethod().WithOrigin("http://http://52.15.75.130:3000");
-                    // policy.AllowAnyHeader().AllowAnyMethod().WithOrigin("http://localhost:3000");
-                });
-            });
-            services.AddMediatR(typeof(List.Handler.Assembly));
+            // services.AddCors(opt =>
+            // {
+            //     opt.AddPolicy("CorsPolicy",policy =>
+            //     {
+            //         //policy.AllowAnyHeader().AllowAnyMethod().WithOrigin("http://http://52.15.75.130:3000");
+            //         policy.AllowAnyHeader().AllowAnyMethod().WithOrigin("http://localhost:3000");
+            //     });
+            // });
+            //services.AddMediatR(typeof(List.Handler.Assembly));
             services.AddControllers();
         }
 
@@ -57,7 +57,7 @@ namespace Reactivities
 
             app.UseAuthorization();
 
-            app.UseCors("CorsPolicy");
+            //app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {
