@@ -2,5 +2,5 @@
 Social networking site
 Tools used are:
 a. ASP.NET Core
-b. React (with Typescript)
+b. ReactJs (with Typescript)
 c. Mobx
