@@ -22,16 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "watch": "npm-watch",
     "eject": "react-scripts eject"
-  },
-  "watch": {
-    "build": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "js,jsx"
-    }
   },
   "eslintConfig": {
     "extends": "react-app"
